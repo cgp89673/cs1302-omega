@@ -60,6 +60,9 @@ public class DemoGame extends Game {
         isKeyPressed( KeyCode.LEFT, () -> player.setX(player.getX() - 10.0));
         isKeyPressed(KeyCode.RIGHT, () -> player.setX(player.getX() + 10.0));
 
+        //added
+        isKeyPressed(KeyCode.UP, () -> player.setY(player.getY() - 10.0));
+        isKeyPressed(KeyCode.DOWN, () -> player.setY(player.getY() + 10.0));
         // <--------------------------------------------------------------------
         // try adding the code to make the player move up and down!
         // <--------------------------------------------------------------------
