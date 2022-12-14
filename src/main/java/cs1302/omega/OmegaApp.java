@@ -36,7 +36,6 @@ public class OmegaApp extends Application {
         //some labels to display information
         Label score = new Label("Score: " );
         score.setText("Score: " + SnakeGame.count);
-        //Label instructions = new Label("Use left, right, up and down arrow keys to try to collect the food.");
 
         // demo game provided with the starter code (640, 240)
         SnakeGame game = new SnakeGame(630, 420, score);

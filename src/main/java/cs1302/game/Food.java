@@ -3,8 +3,8 @@ package cs1302.game;
 import javafx.scene.shape.Circle;
 import java.util.Random;
 
-/**                                                                                      
- * A food object.                                                                          
+/**
+ * A food object.
  */
 public class Food extends Circle {
     private Random rng;
@@ -14,20 +14,22 @@ public class Food extends Circle {
 
     /**
      * Construct an {@code Food} object.
-     */ 
+     * @param maxX the max value of x
+     * @param maxY the max value of y
+     */
     public Food(int maxX, int maxY) {
         super(20.0);
-	    this.rng = new Random();
+        rng = new Random();
         this.maxX = maxX;
         this.maxY = maxY;
-    } // IdleCat                                                                                                   
+    } // Food
 
     /**
-     * Update the position of the food.                           
+     * Update the position of the food.
      */
     public void randomizePos() {
-        setCenterX(rng.nextDouble() * (maxX - 40) + 40);
-        setCenterY(rng.nextDouble() * (maxY - 40) + 40);
+        setCenterX(rng.nextDouble() * (maxX - 40) + 50);
+        setCenterY(rng.nextDouble() * (maxY - 40) + 50);
     } // randomizePos
 
     /**
@@ -43,4 +45,4 @@ public class Food extends Circle {
         }
         return result;
     }
-} // IdleCat          
+} // Food
