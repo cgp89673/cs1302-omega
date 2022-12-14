@@ -1,18 +1,19 @@
 package cs1302.omega;
 
-import cs1302.game.DemoGame;
+import cs1302.game.SnakeGame;
 
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+
 /**
- * REPLACE WITH NON-SHOUTING DESCRIPTION OF YOUR APP.
+ * Basic snake game.
  */
 public class OmegaApp extends Application {
 
@@ -32,28 +33,26 @@ public class OmegaApp extends Application {
         banner.setPreserveRatio(true);
         banner.setFitWidth(640);
 
-        // some labels to display information
-        Label notice = new Label("Modify the starter code to suit your needs.");
-        Label instructions
-            = new Label("Move left/right/up/down with arrow keys; click rectangle to teleport.");
+        //some labels to display information
+        Label score = new Label("Score: " );
+        score.setText("Score: " + SnakeGame.count);
+        //Label instructions = new Label("Use left, right, up and down arrow keys to try to collect the food.");
 
         // demo game provided with the starter code (640, 240)
-        DemoGame game = new DemoGame(640, 400);
+        SnakeGame game = new SnakeGame(630, 420, score);
 
         // setup scene
-        VBox root = new VBox(banner, notice, instructions, game);
+        VBox root = new VBox(banner, game, score);
         Scene scene = new Scene(root);
 
         // setup stage
-        stage.setTitle("OmegaApp!");
+        stage.setTitle("Snake Game");
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> Platform.exit());
         stage.sizeToScene();
         stage.show();
-
         // play the game
         game.play();
-
     } // start
 
 } // OmegaApp

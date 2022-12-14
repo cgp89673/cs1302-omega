@@ -154,7 +154,7 @@ Arcade Game
      that provides some neat features like a main game loop and support for
      continuously holding down a key.
 
-     .. |cs1302_game_DemoGame| replace:: ``cs1302.game.DemoGame``
+     .. |cs1302_game_DemoGame| replace:: ``cs1302.game.SnakeGame``
      .. _cs1302_game_DemoGame: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/game/DemoGame.java
      .. |cs1302_game_Game| replace:: ``cs1302.game.Game``
      .. _cs1302_game_Game: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/game/Game.java
